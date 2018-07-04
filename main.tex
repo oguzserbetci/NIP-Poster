@@ -250,33 +250,47 @@ Nam quis odio enim, in molestie libero. Vivamus cursus mi at nulla elementum sol
 %----------------------------------------------------------------------------------------
 
 \begin{exampleblock}{Results}
-    \begin{itemize}
-        \item Basic statistics
-        \item Plot the value function with different utility functions
-        \item Plot 3 groups of behavior
-        \item Plot the policy of agent
-    \end{itemize}
 
 \begin{figure}
-\includegraphics[width=0.8\linewidth]{img/placeholder.jpg}
-\caption{Figure caption}
+\includegraphics[width=0.45\linewidth]{img/avg_reward.png}
+\includegraphics[width=0.45\linewidth]{img/avg_waiting.png}
+\caption{Average reward and waiting times in different experiment scenarios.}
 \end{figure}
 
-Nunc tempus venenatis facilisis. Curabitur suscipit consequat eros non porttitor. Sed a massa dolor, id ornare enim:
+\begin{figure}
+    \includegraphics[width=0.8\linewidth]{img/rational_policy.png}
+\caption{Value function and policy of a traditional RL agent with risk-neutral behaviour in the expensive observation scenario. The agent sells at a fixed belief regardless of waiting time.}
+\end{figure}
 
-\begin{table}
-\vspace{2ex}
-\begin{tabular}{l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\caption{Table caption}
-\end{table}
+\begin{figure}
+    \includegraphics[width=0.8\linewidth]{img/sine_policy.png}
+    \caption{Value function and policy of a RL agent with hyperbolic sine utility function in the expensive observation scenario. The agent sells at a fixed time step regardless of its belief.}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=0.8\linewidth]{img/dynamic_policy.png}
+    \caption{Value function and policy of a RL agent with hyperbolic sine utility function in the expensive observation scenario. The agent sells depending on both time and its belief.}
+\end{figure}
+
+
+\begin{figure}
+    \includegraphics[width=0.8\linewidth]{img/fit.png}
+\caption{Examples from three different behaviors observed and replicated with RL agents.}
+\end{figure}
+
+%\begin{table}
+%\vspace{2ex}
+%\begin{tabular}{l l l}
+%\toprule
+%\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+%\midrule
+%Treatment 1 & 0.0003262 & 0.562 \\
+%Treatment 2 & 0.0015681 & 0.910 \\
+%Treatment 3 & 0.0009271 & 0.296 \\
+%\bottomrule
+%\end{tabular}
+%\caption{Table caption}
+%\end{table}
 
 \end{exampleblock}
 
