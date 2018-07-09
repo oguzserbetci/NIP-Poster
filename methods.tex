@@ -62,13 +62,12 @@ state/.style ={ circle ,fill=black!20, minimum width =3 cm}]
     \begin{figure}
         \centering
         \includegraphics[scale=0.9]{img/belief_table.pdf}
-        \caption{Caption}
-        \label{fig:my_label}
+        \caption{The updated believe $b'$ given a current believe $b$ and an observation $o$, computed using bayesian estimation}
     \end{figure}
     \item Solve the MDP with value iteration on an augmented state space.
     \begin{flalign}
     V^{n}_{U}(b,w) &= U(w)\tag{Initalization} \\
-    V^{n}_{U}(b,w) &= \max_{a \in A}(\sum_{o \in O}{P(o|b)V^{n+1}_{U}(b', w + r(a))}) \tag{Iteration}
+    V^{n-1}_{U}(b,w) &= \max_{a \in A}(\sum_{o \in O}{P(o|b)V^{n}_{U}(b', w + r(a))}) \tag{Iteration}
     \end{flalign}
     
     \item Different utility functions model different behaviors
