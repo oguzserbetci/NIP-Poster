@@ -3,18 +3,20 @@
 %TODO Change text about utility and risk sensitivites to a comic
 %TODO Change text color of captions
 %TODO Include information about exp UF and include the formula
-\begin{block}{\normalsize{Risk and Utility}}
 
-Risk: 
+
+\Large{Risk and Utility}
+
+\normalsize
+
 \begin{itemize}
     \item Risk is induced by choice with uncertain outcome.
     \item People behave \textbf{risk seeking}, \textbf{risk neutral} or \textbf{risk averse}.
     % \item Risk can exist without the danger of loss (e.g. loosing money).
 \end{itemize}
 
- Utility:
 \begin{itemize}
-    \item People map money to utility by \textbf{utility function}.
+    \item People map money to utility by \textbf{utility functions}.
     %\item The same amount of money can have different utility for different people.
     \item Curvature of function defines risk profile.
 \end{itemize}
@@ -27,28 +29,38 @@ Risk:
   
 \end{figure}
 
-\end{block}
 
 %TODO Change this block to a plot.
-\begin{block}{(Partially Observable) Markov Decision Process}
+\Large{(Partially Observable) Markov Decision Process}
 
-Making decisions in a partially observable environment.
+\normalsize
 
 \begin{itemize}
-    \item Set of States $\mathcal{S}$ (Terminal and Non Terminal)
-    \item Set of Actions $\mathcal{A}$
-    \item Probabilistic Transitions depending on tuple $\mathcal{S} x \mathcal{A}$
-    \item Reward function $R(s,a)$
+    \item Making decisions in a partially observable environment.
+    \item Work on probability distribution over states rather than actual state.
 \end{itemize}
+\begin{figure}
+  \centering
+    \includegraphics[width=0.9\textwidth]{img/background/POMDP}
+  \caption{Cartoon of a partially observable environment. Instead of states the agent only gets observations as inputs.}
+  
+\end{figure}
 
-For partially observability states are hidden but produce observations:
-\begin{itemize}
-    \item Observation space $\mathcal{O}$
-    \item Observation function $p(o | s, a)$
-\end{itemize}
 
-Agent needs to work on probability distribution over all states rather than single deterministic state.
+%\begin{itemize}
+%    \item Set of States $\mathcal{S}$ (Terminal and Non Terminal)
+%    \item Set of Actions $\mathcal{A}$
+%    \item Probabilistic Transitions depending on tuple $\mathcal{S} x \mathcal{A}$
+%    \item Reward function $R(s,a)$
+%\end{itemize}
+
+%For partially observability states are hidden but produce observations:
+%\begin{itemize}
+%    \item Observation space $\mathcal{O}$
+%    \item Observation function $p(o | s, a)$
+%\end{itemize}
+
 % add reference: http://www.cassandra.org/arc/papers/aaai94.pdf
-\end{block}
+
 
 \end{exampleblock}

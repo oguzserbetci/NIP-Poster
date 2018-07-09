@@ -8,7 +8,7 @@
 % https://teamwork.jacobs-university.de:8443/confluence/display/CoPandBiG/LaTeX+Poster
 % 
 % Further modified by:
-% Nathaniel Johnston (nathaniel@njohnston.ca)
+% Nathaniel Johnston (nathaniel@njohnston.ca)https://v2.overleaf.com/6621156184mqqwsfbrcjkk
 %
 % This template has been downloaded from:
 % http://www.LaTeXTemplates.com
@@ -36,7 +36,7 @@
 
 \documentclass[final]{beamer}
 
-\usepackage[scale=1]{beamerposter} % Use the beamerposter package for laying out the poster
+\usepackage[scale=0.8]{beamerposter} % Use the beamerposter package for laying out the poster
 
 % \usetheme{confposter} % Use the confposter theme supplied with this template
 \usetheme[faculty=chemo]{fibeamer} % Uncomment to use Masaryk University's fibeamer theme instead.
@@ -61,8 +61,8 @@
 \newlength{\threecolwid}
 \setlength{\paperwidth}{46.8in} % A0 width: 46.8in
 \setlength{\paperheight}{33.1in} % A0 height: 33.1in
-\setlength{\sepwid}{0.024\paperwidth} % Separation width (white space) between columns
-\setlength{\onecolwid}{0.21\paperwidth} % Width of one column
+\setlength{\sepwid}{0.01\paperwidth} % Separation width (white space) between columns
+\setlength{\onecolwid}{0.23\paperwidth} % Width of one column
 \setlength{\twocolwid}{0.451\paperwidth} % Width of two columns
 \setlength{\threecolwid}{0.678\paperwidth} % Width of three columns
 %\setlength{\topmargin}{-0.5in} % Reduce the top margin size
@@ -72,6 +72,12 @@
 
 \usepackage{booktabs} % Top and bottom rules for tables
 
+\usepackage {tikz}
+\usetikzlibrary {positioning}
+\usepackage{graphicx,caption}
+
+\definecolor {processblue}{cmyk}{0.96,0,0,0}
+
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION 
 %----------------------------------------------------------------------------------------
@@ -79,9 +85,7 @@
 \title{Neural mechanisms of risk-sensitive choice and reinforcement
 learning under uncertainty} % Poster title
 
-\author{Jan Botsch, Emil Azadian, Oǧuz Şerbetci, Vlad Frasineanu, Stephan Tietz} % Author(s)
-
-\institute{Neural Information Processing Group, TU Berlin} % Institution(s)
+\author{Jan Botsch, Emil Azadian, Oǧuz Şerbetci, Vlad Frasineanu, Stephan Tietz – Neural Information Project, Neural Information Processing Group, TU Berlin} % Author(s)
 
 %----------------------------------------------------------------------------------------
 
@@ -238,13 +242,11 @@ Researching human risk behavior under uncertainty is important to build algorith
 
 \begin{exampleblock}{Conclusion}
 
-% TODO touch on objectives.
-
 \begin{itemize}
-    %TOOD reforumlate this @oguz :)
-    \item People could be categorized into three main groups.
-    \item Exponential Utility cannot model all risk-behavior observed in humans.
-    \item Agents acting with different risk profile perform ... 
+    \item Experimentees were categorized under three different risk-behavior.
+    \item Exponential utility cannot model all human risk-behavior.
+    % TODO fill up
+    \item Agents acting with different risk-profile perform ... 
 \end{itemize}
 
 \end{exampleblock}
@@ -252,8 +254,8 @@ Researching human risk behavior under uncertainty is important to build algorith
 \begin{exampleblock}{Future Work}
 
 \begin{itemize}
-    \item End-to-end method for deriving utility functions from human behaviour.
-    \item Apply in high-risk use-cases such as flight control.
+    \item End-to-end method for deriving utility functions from human behaviour. (solve the inverse problem)
+    \item Demonstration in high-risk applications such as flight control.
 \end{itemize}
 
 \end{exampleblock}
