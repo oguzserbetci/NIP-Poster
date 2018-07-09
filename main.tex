@@ -38,7 +38,9 @@
 
 \usepackage[scale=0.8]{beamerposter} % Use the beamerposter package for laying out the poster
 
-% \usetheme{confposter} % Use the confposter theme supplied with this template
+
+
+%\usetheme{confposter} % Use the confposter theme supplied with this template
 \usetheme[faculty=chemo]{fibeamer} % Uncomment to use Masaryk University's fibeamer theme instead.
 
 % \setbeamercolor{block title}{fg=nred,bg=white} % Colors of the block titles
@@ -76,6 +78,8 @@
 \usetikzlibrary {positioning}
 \usepackage{graphicx,caption}
 
+\usepackage{subcaption}
+
 \definecolor {processblue}{cmyk}{0.96,0,0,0}
 
 %----------------------------------------------------------------------------------------
@@ -90,6 +94,7 @@ learning under uncertainty} % Poster title
 %----------------------------------------------------------------------------------------
 
 \begin{document}
+
 \addtobeamertemplate{block end}{}{\vspace*{2ex}} % White space under blocks
 \addtobeamertemplate{block example end}{}{\vspace*{2ex}} % White space under example blocks
 \addtobeamertemplate{block alerted end}{}{\vspace*{2ex}} % White space under highlighted (alert) blocks
@@ -97,6 +102,7 @@ learning under uncertainty} % Poster title
 \setlength{\belowcaptionskip}{2ex} % White space under figures
 \setlength\belowdisplayshortskip{2ex} % White space under equations
 %\begin{darkframes} % Uncomment for dark theme, don't forget to \end{darkframes}
+
 \begin{frame} % The whole poster is enclosed in one beamer frame
 
 %==========================Begin Head===============================
@@ -140,7 +146,36 @@ Researching human risk behavior under uncertainty is important to build algorith
 \input{background.tex}
 
 
-%------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+
+\begin{exampleblock}{References}
+
+\nocite{*} % Insert publications even if they are not cited in the poster
+\small{\bibliographystyle{unsrt}
+\bibliography{sample}\vspace{1cm}}
+\end{exampleblock}
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+
+%\setbeamercolor{block title}{fg=red,bg=white} % Change the block title color
+
+%\begin{exampleblock}{Acknowledgements}
+
+%\small{\rmfamily{Nam mollis tristique neque eu luctus. Suspendisse rutrum congue nisi sed convallis. Aenean id neque dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.}} \\
+
+%\end{exampleblock}
+
+\begin{block}{Acknowledgements}
+
+This work was supported by [Department Name]. The authors gratefully acknowledge the helpful discussions and technical assistance provided by [Rong], [Vaios].
+We also thank the WZB department for assisting us during the execution of the experiment.
+
+\end{block}
+
 %----------------------------------------------------------------------------------------
 
 \end{column} % End of the first column
@@ -172,8 +207,6 @@ Researching human risk behavior under uncertainty is important to build algorith
 \input{methods.tex}
 
 \end{exampleblock}
-
-%----------------------------------------------------------------------------------------
 
 \end{column} % End of column 2
 
@@ -259,38 +292,6 @@ Researching human risk behavior under uncertainty is important to build algorith
 \end{itemize}
 
 \end{exampleblock}
-
-%----------------------------------------------------------------------------------------
-%	REFERENCES
-%----------------------------------------------------------------------------------------
-
-\begin{exampleblock}{References}
-
-\nocite{*} % Insert publications even if they are not cited in the poster
-\small{\bibliographystyle{unsrt}
-\bibliography{sample}\vspace{1cm}}
-\end{exampleblock}
-
-%----------------------------------------------------------------------------------------
-%	ACKNOWLEDGEMENTS
-%----------------------------------------------------------------------------------------
-
-%\setbeamercolor{block title}{fg=red,bg=white} % Change the block title color
-
-%\begin{exampleblock}{Acknowledgements}
-
-%\small{\rmfamily{Nam mollis tristique neque eu luctus. Suspendisse rutrum congue nisi sed convallis. Aenean id neque dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.}} \\
-
-%\end{exampleblock}
-
-\begin{block}{Acknowledgements}
-
-This work was supported by [Department Name]. The authors gratefully acknowledge the helpful discussions and technical assistance provided by [Rong], [Vaios].
-We also thank the WZB department for assisting us during the execution of the experiment.
-
-\end{block}
-
-%----------------------------------------------------------------------------------------
 
 \end{column} % End of the third column
 

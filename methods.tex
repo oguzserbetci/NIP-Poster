@@ -7,25 +7,27 @@
 \begin {center}
 \begin {tikzpicture}[-latex ,auto ,node distance =3cm and 4cm ,on grid ,
 semithick ,
-state/.style ={ circle ,top color =white , bottom color = processblue!20 ,
-draw,processblue , text=blue , minimum width =1 cm}]
+state/.style ={ circle ,fill=black!20, minimum width =3 cm}]
 \node[state] (C){$Sold$};
-\node[state] (A) [above left=of C] {$Recession$};
-\node[state] (B) [above right =of C] {$Booming$};
-\coordinate[below left of=C] (D);
-\coordinate[below right of=C] (E);
+\node[state] (A) [above left=of C,align=center] {Reces\\sion};
+\node[state] (B) [above right =of C,align=center] {Boom\\ing};
+\coordinate[below of=A] (AA);
+\coordinate[below of=B] (BB);
+\coordinate[below of=AA] (D);
+\coordinate[below of=BB] (E);
 
-\path (A) edge [loop left] node[left] {$0.86$} (A);
-\path (A) edge [bend left = -25] node[below =0.25 cm] {$1$} (C);
-\path (A) edge [bend left =25] node[above] {$0.14$} (B);
 
-\path (B) edge [loop right] node[right] {1} (B);
-\path (B) edge [bend right = -25] node[below =0.25 cm] {$1$} (C);
+\path (A) edge [loop left, line width=2mm, align=center] node[left] {wait \\ $0.86$} (A);
+\path (A) edge [bend left = -25,line width=2mm,align=center] node[below =0.25 cm] {sell\\$1.0$} (C);
+\path (A) edge [bend left =25,line width=2mm,align=center] node[above] {wait\\$0.14$} (B);
+
+\path (B) edge [loop right,line width=2mm,align=center] node[right] {wait\\$1.0$} (B);
+\path (B) edge [bend right = -25,line width=2mm,align=center] node[below =0.25 cm] {sell\\$1.0$} (C);
 
 %\fill[gray!40!white, opacity=0.5] (-6,-1) rectangle (5,6);
-\pause
-\path (A) edge [bend right =25] node[left] {$Observation$} (D);
-\path (B) edge [bend left =25] node[right] {$Observation$} (E);
+
+\path (A) edge [bend right =25,line width=2mm, dashed] node[left] {$Observation$} (D);
+\path (B) edge [bend left  =25,line width=2mm, dashed] node[right] {$Observation$} (E);
 \end{tikzpicture}
 \end{center}
 \end{figure}

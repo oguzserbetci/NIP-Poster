@@ -1,9 +1,7 @@
 \begin{exampleblock}{Background}
-%TODO Put Risk and Utility in smaller font
 %TODO Change text about utility and risk sensitivites to a comic
 %TODO Change text color of captions
 %TODO Include information about exp UF and include the formula
-
 
 \Large{Risk and Utility}
 
@@ -13,37 +11,76 @@
     \item Risk is induced by choice with uncertain outcome.
     \item People behave \textbf{risk seeking}, \textbf{risk neutral} or \textbf{risk averse}.
     % \item Risk can exist without the danger of loss (e.g. loosing money).
-\end{itemize}
-
-\begin{itemize}
-    \item People map money to utility by \textbf{utility functions}.
+    \item People map money to utility by \textbf{utility functions}, e.g. exponential utility $U(a) = (1-\exp(-\lambda a) / \labmda$. 
     %\item The same amount of money can have different utility for different people.
     \item Curvature of function defines risk profile.
 \end{itemize}
 
 
-\begin{figure}
-  \centering
-    \includegraphics[width=0.9\textwidth]{img/background/riskaversion.jpg}
-  \caption{Choice from a lottery where you gain 10\$ or 50\$ by 50\% or a gift of 30\$ for sure. The utility for the fixed reward (point A) is higher than the expected utility of the lottery (point B).}
-  
+%\begin{figure}
+%  \centering
+%    \includegraphics[width=0.9\textwidth]{img/background/riskaversion.jpg}
+%  \caption{Choice from a lottery where you gain 10\$ or 50\$ by 50\% or a gift of 30\$ for sure. The utility for the fixed reward (point A) is higher than the expected utility of the lottery (point B).}
+%\end{figure}
+
+
+% \begin{figure}
+% \centering
+% \begin{minipage}{.5\textwidth}
+%   \centering
+%   \includegraphics[height=10cm]{img/background/riskaversion}
+%   \captionof{figure}{Choice from a lottery where you gain 10\$ or 50\$ by 50\% or a gift of 30\$ for sure. The utility for the fixed reward (point A) is higher than the expected utility of the lottery (point B).}
+%   \label{fig:test1}
+% \end{minipage}%
+% \begin{minipage}{.5\textwidth}
+%   \centering
+%   \includegraphics[height=10cm]{img/background/Exponential_Utility_Function}
+%   \captionof{figure}{The exponential utility function for different risk parameters \alpha. $a < 0$ implies risk seeking, $a = 0 $ risk neutral and $a > 0 $ risk averse behaviour.}
+%   \label{fig:test2}
+% \end{minipage}
+% \end{figure}
+
+\newlength{\twosubht}
+\newsavebox{\twosubbox}
+
+
+\begin{figure}[htp]
+
+% preliminary
+\sbox\twosubbox{%
+  \resizebox{\dimexpr.9\textwidth-1em}{!}{%
+    \includegraphics[height=10cm]{img/background/riskaversion}%
+    \includegraphics[height=10cm]{img/background/Exponential_Utility_Function}%
+  }%
+}
+\setlength{\twosubht}{\ht\twosubbox}
+
+% typeset
+
+\centering
+
+\subcaptionbox{Risk averse lottery\label{f}}{%
+  \includegraphics[height=\twosubht]{img/background/riskaversion}%
+}\quad
+\subcaptionbox{Exponential utility function\label{s}}{%
+  \includegraphics[height=\twosubht]{img/background/Exponential_Utility_Function}%
+}
+
+\caption{a) Choice from a risk free gift of 30\$ or a lottery where by coin flip you win 10\$ or 50\$. The utility for the risk free choice (point A) is higher than the expected utility of the risky lottery (point B). b) The exponential utility function for different risk parameters \alpha. $a < 0$ implies risk seeking, $a = 0 $ risk neutral and $a > 0 $ risk averse behaviour.}
+
 \end{figure}
 
 
-%TODO Change this block to a plot.
 \Large{(Partially Observable) Markov Decision Process}
-
 \normalsize
-
 \begin{itemize}
-    \item Making decisions in a partially observable environment.
+    \item Making decisions when state is not fully-observable.
     \item Work on probability distribution over states rather than actual state.
 \end{itemize}
 \begin{figure}
   \centering
-    \includegraphics[width=0.9\textwidth]{img/background/POMDP}
+    \includegraphics[width=0.7\textwidth]{img/background/POMDP}
   \caption{Cartoon of a partially observable environment. Instead of states the agent only gets observations as inputs.}
-  
 \end{figure}
 
 
