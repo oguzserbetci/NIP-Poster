@@ -92,6 +92,19 @@ learning under uncertainty} % Poster title
 
 \author{Jan Botsch, Emil Azadian, Oǧuz Şerbetci, Vlad Frasineanu, Stephan Tietz – Neural Information Project, Neural Information Processing Group, TU Berlin} % Author(s)
 
+\addtobeamertemplate{headline}{} 
+{\begin{tikzpicture}[remember picture, overlay]
+     \node [anchor=north east, inner sep=3cm]  at (current page.north east)
+     {\includegraphics[height=3cm]{img/TU.png}};
+  \end{tikzpicture}}
+
+\addtobeamertemplate{headline}{} 
+{\begin{tikzpicture}[remember picture, overlay]
+     \node [anchor=north west, inner sep=3cm]  at (current page.north west)
+     {\includegraphics[height=3cm]{img/NI.png}};
+  \end{tikzpicture}}
+  
+
 %----------------------------------------------------------------------------------------
 
 \begin{document}
@@ -292,7 +305,7 @@ We also thank the WZB department for assisting us during the execution of the ex
 \begin{exampleblock}{Future Work}
 
 \begin{itemize}
-    \item End-to-end method for deriving utility functions from human behaviour (i.e. solve the inverse problem).
+    \item End-to-end method for deriving utility functions from human behavior (i.e. solve the inverse problem).
     \item Demonstration in high-risk applications such as flight control.
 \end{itemize}
 
