@@ -7,29 +7,31 @@
 \large{Solving the risk sensitive POMDP}
 
 \normalsize
+Marecki \cite{marecki} showed that RS POMDPS can be solved for arbitrary utility functions using \textbf{reverse value iteration} in Belief Wealth Space.
+For this the original state space must be augmented two times:
 
-State space must be augmented two times:
 \begin{figure}
 \begin {center}
-\begin {tikzpicture}[-latex ,auto ,node distance =6cm and 6cm ,on grid ,
+\begin {tikzpicture}[-latex ,auto ,node distance =8cm and 6cm ,on grid ,
 semithick ,
-state/.style ={ circle ,fill=black!20, minimum width =3 cm}]
-\node[state] (A) [align=center] {Observation\\Time};
-\node[state] (B) [right of=A,align=center] {Belief\\Time};
-\node[state] (C) [right of=B,align=center] {Belief\\Wealth};
+state/.style ={ circle ,fill=black!20, minimum width =6 cm}]
+\node[state] (A) [align=center] {Observation\\Time\\Space};
+\node[state] (B) [right of=A,align=center] {Belief\\Time\\Space};
+\node[state] (C) [right of=B,align=center] {Belief\\Wealth\\Space};
 
 
-\path (A) edge [line width=2mm, align=center] node[left] {bayes} (B);
-\path (B) edge [bend left = -25,line width=2mm,align=center] node[below =0.25 cm] {sell\\$1.0$} (C);
+\path (A) edge [line width=2mm, align=center] node[left] {} (B);
+\path (B) edge [line width=2mm,align=center] node[below =0.25 cm] {} (C);
 \end{tikzpicture}
 \end{center}
 \end{figure}
 
+\hspace{2cm}
 
-Observation and time to belief and time
-belief and time to belief and wealth
+\large{Value functions in belief wealth space}
 
-\cite{marecki} showed that in belief time space POMDPs can be solved for arbitrary utility functions using \textbf{reverse value iteration}.
+
+\normalsize
 
 \begin{figure}
     \includegraphics[width=0.9\linewidth]{img/exp_policy.pdf}\\
@@ -38,6 +40,10 @@ belief and time to belief and wealth
     \caption{Value functions exhibiting different risk-behaviors; from top left: risk neutral agent (utility function is the identity function), risk-seeking agent with exponential utility function, two fixed time agents with different time thresholds, two agents with dynamic exponential utility function in the expensive expert scenario.}
 \end{figure}
 
+\large{From human behaviour to utility functions}
+
+
+\normalsize
 \textbf{The original problem:}
 \begin{itemize}
 \item[①] Choose utility function with risk parameter.
