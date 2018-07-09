@@ -11,30 +11,16 @@
 State space must be augmented two times:
 \begin{figure}
 \begin {center}
-\begin {tikzpicture}[-latex ,auto ,node distance =3cm and 4cm ,on grid ,
+\begin {tikzpicture}[-latex ,auto ,node distance =6cm and 6cm ,on grid ,
 semithick ,
 state/.style ={ circle ,fill=black!20, minimum width =3 cm}]
-\node[state] (A) [align=center] {Reces\\sion};
-\node[state] (B) [right of=A,align=center] {Boom\\ing};
-\node[state] (C) [right of=A,align=center] {$Sold$};
-
-\coordinate[below of=A] (AA);
-\coordinate[below of=B] (BB);
-\coordinate[below of=AA] (D);
-\coordinate[below of=BB] (E);
+\node[state] (A) [align=center] {Observation\\Time};
+\node[state] (B) [right of=A,align=center] {Belief\\Time};
+\node[state] (C) [right of=B,align=center] {Belief\\Wealth};
 
 
-\path (A) edge [loop left, line width=2mm, align=center] node[left] {wait \\ $0.86$} (A);
-\path (A) edge [bend left = -25,line width=2mm,align=center] node[below =0.25 cm] {sell\\$1.0$} (C);
-\path (A) edge [bend left =25,line width=2mm,align=center] node[above] {wait\\$0.14$} (B);
-
-\path (B) edge [loop right,line width=2mm,align=center] node[right] {wait\\$1.0$} (B);
-\path (B) edge [bend right = -25,line width=2mm,align=center] node[below =0.25 cm] {sell\\$1.0$} (C);
-
-%\fill[gray!40!white, opacity=0.5] (-6,-1) rectangle (5,6);
-
-\path (A) edge [bend right =25,line width=2mm, dashed] node[left] {$Observation$} (D);
-\path (B) edge [bend left  =25,line width=2mm, dashed] node[right] {$Observation$} (E);
+\path (A) edge [line width=2mm, align=center] node[left] {bayes} (B);
+\path (B) edge [bend left = -25,line width=2mm,align=center] node[below =0.25 cm] {sell\\$1.0$} (C);
 \end{tikzpicture}
 \end{center}
 \end{figure}
