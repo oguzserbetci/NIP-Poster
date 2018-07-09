@@ -4,6 +4,7 @@
 %TODO Get rid of 4panel, put the top left picture, include text/caption explaining the setting based on picture added
 \normalsize
 \begin{figure}
+\setlength{\belowcaptionskip}{-7pt}
 \begin {center}
 \begin {tikzpicture}[-latex ,auto ,node distance =3cm and 4cm ,on grid ,
 semithick ,
@@ -30,8 +31,8 @@ state/.style ={ circle ,fill=black!20, minimum width =3 cm}]
 \path (B) edge [bend left  =25,line width=2mm, dashed] node[right] {$Observation$} (E);
 \end{tikzpicture}
 \end{center}
+ \caption{The experiment setup. The market has three states, \textit{recession} and \textit{booming} and \textit{sold}. The market starts in recession and iteratively transitions are performed. At each transition subjects are shown an observation from the current state and can choose between \textit{wait} and \textit{sell}. The experiments ends when subjects sell and they receive a reward based on the last market state.}
 \end{figure}
-
 \begin{itemize}
     \item In a simulated housing market, subjects needed to decide when to sell a house.
     \item Waiting decreases risk, but increases costs.
@@ -40,6 +41,7 @@ state/.style ={ circle ,fill=black!20, minimum width =3 cm}]
 
 
 \begin{figure}
+\setlength{\belowcaptionskip}{-7pt}
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
@@ -51,18 +53,17 @@ state/.style ={ circle ,fill=black!20, minimum width =3 cm}]
  \includegraphics[width=0.95\textwidth]{img/methods/experiment_bel_1.png}
   \caption{Bayesian estimate experiment}
 \end{subfigure}
-\caption{The two experiment scenarios and their respective UI}
+\caption{The two experiment scenarios and their respective UI. In (a) subjects are shown the observation history at the top and a new observation at the bottom. In (b) they see the bayesian estimate based on the observation history.}
 \end{figure}
-
-
 \Large{The Agent}
 \normalsize
 \begin{itemize}
     \item Simplify POMDP into a MDP by Bayesian estimates.
     \begin{figure}
+    \setlength{\belowcaptionskip}{-3pt}
         \centering
         \includegraphics[scale=0.9]{img/belief_table.pdf}
-        \caption{The updated believe $b'$ given a current believe $b$ and an observation $o$, computed using bayesian estimation}
+        \caption{The updated believe $b'$ given a current believe $b$ and an observation $o$, calculated using bayesian estimation}
     \end{figure}
     \item Solve the MDP with value iteration on an augmented state space. \cite{bauerle}
     \begin{flalign}
