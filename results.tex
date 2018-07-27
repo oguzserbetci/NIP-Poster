@@ -4,7 +4,7 @@
 % TODO divide into subsections: Results for Agent, Results for Experiment, Comparison
 % TODO make a 3x2 grid with different risks.
 
-\large{Solving the risk sensitive POMDP}
+\Large{Solving the risk sensitive POMDP}
 
 \normalsize
 Marecki \cite{marecki} showed that RSPOMDPs can be solved for arbitrary utility functions using \textbf{reverse value iteration} in Belief Wealth Space.
@@ -28,21 +28,21 @@ state/.style ={ circle ,fill=black!20, minimum width =6 cm}]
 
 \hspace{2cm}
 
-\large{Value functions in belief wealth space}
+\Large{Value functions in belief wealth space}
 
 
 \normalsize
 
 \begin{figure}
-    \includegraphics[width=0.9\linewidth]{img/exp_policy.pdf}\\
-    \vspace{0.5cm}
-    \includegraphics[width=0.9\linewidth]{img/sinh_policy.pdf}\\
-    \vspace{0.5cm}
-    \includegraphics[width=0.9\linewidth]{img/dyn_policy.pdf}
+    \includegraphics[width=0.98\linewidth]{img/exp_policy.pdf}\\
+    \vspace{1cm}
+    \includegraphics[width=0.98\linewidth]{img/sinh_policy.pdf}\\
+    \vspace{1cm}
+    \includegraphics[width=0.98\linewidth]{img/dyn_policy.pdf}
     \caption{Value functions exhibiting different risk-behaviors; from top left: risk neutral agent (utility function is the identity function), risk-seeking agent with exponential utility function, two fixed time agents with different time thresholds, two agents with dynamic exponential utility function.}
 \end{figure}
 
-\large{From human behavior to utility functions}
+\Large{From human behavior to utility functions}
 
 
 \normalsize
@@ -60,4 +60,6 @@ state/.style ={ circle ,fill=black!20, minimum width =6 cm}]
 \item[③] Derive utility function and risk parameters.
 \end{itemize}
 
-The original problem is easy to solve, unfortunately for the inverse problem no solution is known. $\rightarrow$ Perform grid-search and choose optimal utility function.
+The original problem is easy to solve, unfortunately for the inverse problem no solution is known. 
+
+$\rightarrow$ Perform grid-search and choose optimal utility function.
